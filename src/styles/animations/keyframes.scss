@@ -3,7 +3,7 @@
 }
 
 .animation--right {
-  animation: move-right 0.6s ease-out forwards;
+  animation: move-right 1000ms ease-out forwards;
 }
 
 .pre-animation--left {
@@ -11,7 +11,7 @@
 }
 
 .animation--left {
-  animation: move-left 0.6s ease-out forwards;
+  animation: move-left 1000ms ease-out forwards;
 }
 
 .pre-animation--appear {
@@ -19,7 +19,7 @@
 }
 
 .animation--appear {
-  animation: appear 0.6s ease-in-out forwards;
+  animation: appear 1000ms ease-in-out forwards;
 }
 
 @keyframes move-right {
