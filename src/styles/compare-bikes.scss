@@ -1,0 +1,32 @@
+.compare-bikes {
+  margin-bottom: 92px;
+
+  @include on-tablets {
+    margin-bottom: 120px;
+  }
+
+  @include on-desktops {
+    margin-bottom: 180px;
+  }
+
+  &__products {
+    @include page-grid;
+
+    row-gap: 40px;
+  }
+
+  &__product {
+    display: flex;
+    flex-direction: column;
+
+    grid-column: 1 / -1;
+
+    @include on-tablets {
+      grid-column: 2 / -2;
+    }
+
+    @include on-desktops {
+      grid-column: span 4;
+    }
+  }
+}

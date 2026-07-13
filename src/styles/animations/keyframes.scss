@@ -1,0 +1,57 @@
+.pre-animation--right {
+  opacity: 0;
+}
+
+.animation--right {
+  animation: move-right 0.6s ease-out forwards;
+}
+
+.pre-animation--left {
+  opacity: 0;
+}
+
+.animation--left {
+  animation: move-left 0.6s ease-out forwards;
+}
+
+.pre-animation--appear {
+  opacity: 0;
+}
+
+.animation--appear {
+  animation: appear 0.6s ease-in-out forwards;
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-left {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

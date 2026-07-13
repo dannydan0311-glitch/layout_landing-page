@@ -1,3 +1,17 @@
-body {
-  margin: 0;
+.main {
+  background-color: $main-bg-color;
+
+  &__content {
+    padding-top: 60px;
+    padding-bottom: 96px;
+
+    @include on-tablets {
+      padding-top: 120px;
+      padding-bottom: 102px;
+    }
+
+    @include on-desktops {
+      padding-bottom: 164px;
+    }
+  }
 }

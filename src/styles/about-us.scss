@@ -1,0 +1,45 @@
+.about-us {
+  @include page-grid;
+
+  margin-bottom: 92px;
+
+  @include on-tablets {
+    margin-bottom: 132px;
+  }
+
+  @include on-desktops {
+    margin-bottom: 164px;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+
+    @include on-tablets {
+      grid-column: 1 / 4;
+    }
+
+    @include on-desktops {
+      grid-column: span 5;
+    }
+  }
+
+  &__content {
+    grid-column: 1 / 7;
+    align-items: flex-start;
+
+    @include on-tablets {
+      grid-column: 4 / -1;
+    }
+
+    @include on-desktops {
+      grid-column: span 6;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+}
