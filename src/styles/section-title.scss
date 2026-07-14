@@ -1,3 +1,5 @@
+@use '../utils/mixins';
+
 .section-title {
   margin: 0;
   margin-bottom: 48px;
@@ -9,11 +11,11 @@
   letter-spacing: -1.5px;
   text-align: center;
 
-  @include on-tablets {
+  @include mixins.on-tablets {
     font-size: 48px;
   }
 
-  @include on-desktops {
+  @include mixins.on-desktops {
     font-size: 64px;
   }
 
@@ -23,17 +25,17 @@
   }
 
   &--on-desktop {
-    @include on-desktops {
+    @include mixins.on-desktops {
       margin-bottom: 56px;
     }
   }
 
   &--on-tablets {
-    @include on-tablets {
+    @include mixins.on-tablets {
       margin-bottom: 64px;
     }
 
-    @include on-desktops {
+    @include mixins.on-desktops {
       margin-bottom: 48px;
     }
   }

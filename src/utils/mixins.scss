@@ -1,3 +1,5 @@
+@use '../styles/variables' as *;
+
 @mixin on-tablets {
   @media (min-width: $tablet-min-width) {
     @content;

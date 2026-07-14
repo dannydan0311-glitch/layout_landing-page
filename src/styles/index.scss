@@ -1,5 +1,5 @@
-@use './variables';
-@use '../utils/mixins';
+@use './variables' as *;
+@use '../utils/mixins' as mixins;
 @use '../animations/keyframes';
 @use './page';
 @use './top-bar';

@@ -1,3 +1,6 @@
+@use '../styles/variables' as *;
+@use '../utils/mixins';
+
 .contacts {
   margin: 0;
 
@@ -5,8 +8,8 @@
     display: flex;
     flex-direction: column;
 
-    @include on-tablets {
-      @include page-grid;
+    @include mixins.on-tablets {
+      @include mixins.page-grid;
     }
   }
 
@@ -20,11 +23,11 @@
     flex-direction: column;
     align-items: center;
 
-    @include on-tablets {
+    @include mixins.on-tablets {
       grid-column: 1 / 4;
     }
 
-    @include on-desktops {
+    @include mixins.on-desktops {
       grid-column: span 5;
       max-width: 411px;
     }
@@ -45,9 +48,9 @@
     line-height: 20px;
     color: $active-text-color;
 
-    @include input-states;
+    @include mixins.input-states;
 
-    @include on-desktops {
+    @include mixins.on-desktops {
       width: 411px;
     }
 
@@ -79,10 +82,15 @@
     font-weight: 700;
     font-size: 16px;
     color: $main-text-color;
+    background-color: #fff;
 
-    @include button-states;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
 
-    @include on-desktops {
+    @include mixins.button-states;
+
+    @include mixins.on-desktops {
       width: 411px;
     }
   }
@@ -92,11 +100,11 @@
     flex-direction: column;
     align-items: flex-start;
 
-    @include on-tablets {
+    @include mixins.on-tablets {
       grid-column: 4 / -1;
     }
 
-    @include on-desktops {
+    @include mixins.on-desktops {
       grid-column: 8 / -3;
     }
   }

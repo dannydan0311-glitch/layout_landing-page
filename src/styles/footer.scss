@@ -1,3 +1,5 @@
+@use '../utils/mixins';
+
 .footer {
   margin: 0;
   overflow: hidden;
@@ -10,11 +12,11 @@
     height: 200px;
     width: 100vw;
 
-    @include on-tablets {
+    @include mixins.on-tablets {
       height: 480px;
     }
 
-    @include on-desktops {
+    @include mixins.on-desktops {
       height: 555px;
     }
   }
@@ -26,7 +28,7 @@
     object-fit: cover;
     object-position: 85% center;
 
-    @include on-tablets {
+    @include mixins.on-tablets {
       object-position: 70% center;
     }
   }

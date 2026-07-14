@@ -1,24 +1,26 @@
+@use '../utils/mixins';
+
 .about-us {
-  @include page-grid;
+  @include mixins.page-grid;
 
   margin-bottom: 92px;
 
-  @include on-tablets {
+  @include mixins.on-tablets {
     margin-bottom: 132px;
   }
 
-  @include on-desktops {
+  @include mixins.on-desktops {
     margin-bottom: 164px;
   }
 
   &__title {
     grid-column: 1 / -1;
 
-    @include on-tablets {
+    @include mixins.on-tablets {
       grid-column: 1 / 4;
     }
 
-    @include on-desktops {
+    @include mixins.on-desktops {
       grid-column: span 5;
     }
   }
@@ -27,11 +29,11 @@
     grid-column: 1 / 7;
     align-items: flex-start;
 
-    @include on-tablets {
+    @include mixins.on-tablets {
       grid-column: 4 / -1;
     }
 
-    @include on-desktops {
+    @include mixins.on-desktops {
       grid-column: span 6;
     }
   }

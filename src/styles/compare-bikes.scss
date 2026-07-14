@@ -1,16 +1,18 @@
+@use '../utils/mixins';
+
 .compare-bikes {
   margin-bottom: 92px;
 
-  @include on-tablets {
+  @include mixins.on-tablets {
     margin-bottom: 120px;
   }
 
-  @include on-desktops {
+  @include mixins.on-desktops {
     margin-bottom: 180px;
   }
 
   &__products {
-    @include page-grid;
+    @include mixins.page-grid;
 
     row-gap: 40px;
   }
@@ -21,11 +23,11 @@
 
     grid-column: 1 / -1;
 
-    @include on-tablets {
+    @include mixins.on-tablets {
       grid-column: 2 / -2;
     }
 
-    @include on-desktops {
+    @include mixins.on-desktops {
       grid-column: span 4;
     }
   }
